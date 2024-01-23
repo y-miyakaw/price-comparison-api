@@ -12,6 +12,7 @@ func Server() {
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 	e.GET("/", hello)
+	e.POST("/product", SaveProduct)
 	e.Logger.Fatal(e.Start(":1111"))
 
 }
